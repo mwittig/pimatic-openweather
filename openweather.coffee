@@ -20,7 +20,7 @@ module.exports = (env) ->
         createCallback: (config) => new OpenWeatherForecastDevice(config, @config.apiKey)
       })
 
-      # some legazy handling:
+      # some legacy handling:
       if @framework.config?
         for device in @framework.config.devices
           if device.class in ["OpenWeatherDevice", "OpenWeatherForecastDevice"]
@@ -65,17 +65,17 @@ module.exports = (env) ->
         description: "The wind speed"
         type: "number"
         unit: 'm/s'
-        acronym: 'WIND'
+        acronym: '\uD83D\uDCA8'
       rain:
         description: "Rain in mm per 3 hours"
         type: "number"
         unit: "mm"
-        acronym: 'RAIN'
+        acronym: '\u2614'
       snow:
         description: "Snow in mm per 3 hours"
         type: "number"
         unit: "mm"
-        acronym: 'SNOW'
+        acronym: '\u2603'
 
     status: "None"
     temperature: null
@@ -190,17 +190,17 @@ module.exports = (env) ->
         description: "The wind speed"
         type: "number"
         unit: 'm/s'
-        acronym: 'WIND'
+        acronym: '\uD83D\uDCA8'
       rain:
         description: "Rain in mm per 3 hours"
         type: "number"
         unit: "mm"
-        acronym: 'RAIN'
+        acronym: '\u2614'
       snow:
         description: "Snow in mm per 3 hours"
         type: "number"
         unit: "mm"
-        acronym: 'SNOW'
+        acronym: '\u2603'
 
     forecast: "None"
     low: null
